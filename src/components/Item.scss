@@ -1,0 +1,17 @@
+figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+ }   
+    img{
+       width: 300px;
+       
+    }
+    figcaption{
+       font-size:2rem;
+    }
+    p{
+       font-weight: 600;
+    }
