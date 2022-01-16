@@ -1,0 +1,67 @@
+
+
+
+.item-container {
+   width:250px;
+   height: 320px;
+   padding: 10px 20px;
+   box-shadow: 0 0 5px 0 rgba(0,0,0,.24);
+   margin: 10px;
+   background-color: #F9F9F9;
+   transition: all 0.1s ease-in-out;
+   border-radius: 4px;
+   &.item-container:hover{
+      box-shadow:0 0 10px  rgba(0, 0, 0, 0.24);
+      transform:scale(1.005);
+      
+   }
+
+} 
+   
+
+
+article{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+ 
+}   
+   img{
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      
+   }
+   figcaption{
+      font-size:1rem;
+   }
+   p{
+      font-weight: 600;
+   }
+
+
+
+.Brand{
+   text-decoration: none;
+   font-size: 32px;
+   font-weight:700;
+   color: #660708;
+}
+.btn{
+   text-decoration: none;
+   color:#1597E5;
+   font-size: 1rem;
+   font-weight:500;
+
+
+}
+button{
+   background-color: #c1121f;
+}
+
+.price{
+
+   border-radius: 2px;
+}

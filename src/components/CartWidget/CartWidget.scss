@@ -1,0 +1,20 @@
+.cart_widget{
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 40px;
+    // background-color:blue;
+    justify-content:center;
+    align-items: center;
+
+    p{
+        border-radius: 50%;
+        background-color:#1597E5;
+        font-size:16px;
+        width: 20px;
+        color: #fff;
+        display: flex;
+        justify-content:center;
+
+    }
+}

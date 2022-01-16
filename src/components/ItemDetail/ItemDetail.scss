@@ -1,0 +1,21 @@
+.Detail-container{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+.description{
+ width: 700px;
+    p{
+        font-weight: 500;
+    }
+}
+.price{
+    font-weight:600;
+    font-size: 34px;
+}
+
+.img-detail{
+    width:400px;
+    height:400px;
+}
