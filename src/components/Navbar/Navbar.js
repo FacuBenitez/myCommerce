@@ -29,7 +29,7 @@ const Navbar = () => {
         <>
             <nav>
               <Link className="Brand" to={'/'}>Mycommerce</Link>
-                {categories.map(category =><Button variant="outlined" className="btn"> <Link className='link' key={category.id} to={`/category/${category.id}`}>  {category.description}</Link></Button>)}
+                {categories.map(category =><Button key={category.id}variant="outlined" className="btn"> <Link className='link' key={category.id} to={`/category/${category.id}`}>  {category.description}</Link></Button>)}
 
 
 
