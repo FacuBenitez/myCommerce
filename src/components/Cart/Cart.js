@@ -23,11 +23,11 @@ const Cart = () => {
     const [form, setForm] = useState({ nombre: '', email: '' });
     const[loading, setLoading] = useState(true)
     
-    const {cart,removeItem, cleanCart, getCantidad,getUser} = useContext(CartContext);
+    const {cart,removeItem, cleanCart, getQuantity,getUser} = useContext(CartContext);
     let navigate = useNavigate();
 
 
-        const llenarFormulario = (e) => {
+        const fillForm = (e) => {
             const { name, value } = e.target;
             setForm({
                 ...form,
@@ -35,7 +35,7 @@ const Cart = () => {
             });
         };
     
-     const finalizarCompra = (e) => {
+     const finishOrder = (e) => {
             e.preventDefault();
 
             setLoading(false);
@@ -45,7 +45,7 @@ const Cart = () => {
         const objOrder = {
             buyer: { email: form.email, nombre: form.nombre },
             items: cart,
-            total: getCantidad(),
+            total: getQuantity(),
             
             
             
@@ -109,32 +109,46 @@ const Cart = () => {
 
                     {cart.map(producto => {
                                 return <div className="product-container">
-                                        <div><img src={producto.img} alt="" /> </div>
-                                        <div> {producto.description} </div>
-                                        <div>${producto.cantidad * producto.price}</div>
-                                        <div> {producto.cantidad} </div>
+                                            <div className="product">
+                                            <span>Producto</span>
+                                            <img src={producto.img} alt="" /> 
+                                            </div>
+                                            <div className="product"> 
+                                                <span>Descripción</span>
+                                                {producto.description} 
+                                            </div>
                                         
-                                    
+                                            <div className="product">
+                                            <span>Precio</span>
+                                            {producto.cantidad * producto.price}
+                                            </div>
+                                            <div className="product">
+                                            <span>Cantidad</span>
+                                            {producto.cantidad} 
+                                            </div>
+                                            
+                                        
                             
                                     
-                                        <div> <Button onClick={()=>removeItem(producto.id)} color="error" variant="outlined" size="small">Eliminar</Button></div>
-                                        <Button onClick={()=>cleanCart()} variant="outlined" color="error" size="small">Limpiar Carrito</Button>
+                                        <div> <Button onClick={()=>removeItem(producto.id)} color="error" variant="contained" size="small">Eliminar</Button></div>
                                     </div>
                                     
                     })}
                
+                                    <Button onClick={()=>cleanCart()} variant="contained" color="error" size="small">Limpiar Carrito</Button>
+                                    <h3>Complete el formulario para terminar con su compra</h3>
                 </div>
                     
                   { loading ? 
                     <div className="form-container">
-
+                    
                     
                     <form action="POST"
-                    onSubmit={finalizarCompra}
+                    onSubmit={finishOrder}
                     >   
                         <span>Nombre</span>
                         <input type="text" 
-                            onChange={llenarFormulario}
+                            onChange={fillForm}
                             name="nombre"
                             placeholder="Nombre"
                             
@@ -142,7 +156,7 @@ const Cart = () => {
                         />
                         <span>Email</span>
                         <input type="email" 
-                            onChange={llenarFormulario}
+                            onChange={fillForm}
                             name="email"
                             placeholder="Email"
                         />
@@ -161,7 +175,7 @@ const Cart = () => {
                     </form>
                     
                     </div>
-                    : <h1>Estamos generando su orden...</h1>
+                    :    <h1 >Estamos generando su orden...</h1>                  
                   }                        
             </>     
     
