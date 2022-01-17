@@ -10,9 +10,9 @@ Con npm i o npm install podras instalar las dependencies necesarias para hacer f
 
 Para desplegar la aplicacion se necesita ejecutar el script npm start
 
-## Autor
+## Detener la ejecucion del programa
 
-* Facundo Benitez
+Presionando ctrl + C en su terminal puede detener la aplicacion 
 
 
 
@@ -21,3 +21,33 @@ Para desplegar la aplicacion se necesita ejecutar el script npm start
 * React.js
 * Css/Sass 
 * Javascript 
+* Html 
+
+
+## Como funciona el proyecto?
+
+### `ItemListContainer`
+
+ItemListContainer contiene una lista de todos los productos.
+
+### `ItemDetailContainer`
+
+ItemDetailContainer contiene los detalles especificos de un producto
+
+### `Cart`
+
+Cart contiene una lista de los productos elegidos por el usuario
+
+### `Dashboard`
+
+El dashboard contiene un ticket de las compras del usuario generado con el nombre del usuario y el id de su compra
+
+
+## Autor
+
+* Facundo Benitez
+
+
+
+
+
