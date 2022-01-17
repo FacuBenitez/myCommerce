@@ -42,6 +42,8 @@ Cart contiene una lista de los productos elegidos por el usuario
 
 El dashboard contiene un ticket de las compras del usuario generado con el nombre del usuario y el id de su compra
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/86436072/149785872-13bc2eb3-d846-4c2d-8732-a09b18492981.gif)
+
 
 ## Autor
 
