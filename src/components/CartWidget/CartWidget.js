@@ -6,7 +6,7 @@ import {useContext} from 'react'
 import './CartWidget.scss'
 const CartWidget = () => {
    
-    const {getCantidad} =useContext(CartContext)
+    const {getQuantity} =useContext(CartContext)
 
     return (
 
@@ -18,10 +18,10 @@ const CartWidget = () => {
             
             
             </Link>
-           {getCantidad() > 0 && 
+           {getQuantity() > 0 && 
                
                        
-                   <p>{getCantidad()}</p>
+                   <p>{getQuantity()}</p>
                   
                 
            }

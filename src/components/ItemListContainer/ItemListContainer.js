@@ -16,7 +16,6 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         if(!categoryId) {
-
             getDocs(collection(db,'items')).then((querySnapshot) => {
             const products = querySnapshot.docs.map(doc => {
 
@@ -35,9 +34,7 @@ const ItemListContainer = () => {
                     
                     setProducts(products)
                 })
-        
         }
-        
     },[categoryId])
 
     return (
