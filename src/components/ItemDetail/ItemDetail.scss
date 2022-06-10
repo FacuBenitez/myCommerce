@@ -1,11 +1,12 @@
 .Detail-container{
+    width: 100%;
     display: flex;
     justify-content:center;
     align-items:center;
     
 }
 .description{
- width: 700px;
+ width: 500px;
     p{
         font-weight: 500;
     }
@@ -18,4 +19,8 @@
 .img-detail{
     width:400px;
     height:400px;
+   mix-blend-mode: multiply;
 }
+
+
+    

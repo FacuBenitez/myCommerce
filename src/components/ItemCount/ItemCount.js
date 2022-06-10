@@ -30,7 +30,7 @@ const ItemCount = ({stock, initial,onAdd }) => {
     return (
         <div>
             
-            <h5>{count}</h5>
+            <h5 className="count">{count}</h5>
            <div className="btn-container">
 
            <button className="btn-count" onClick={IncrementCount}><AddIcon/></button>

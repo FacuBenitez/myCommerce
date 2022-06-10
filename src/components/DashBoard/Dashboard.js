@@ -27,6 +27,7 @@ const Dashboard = () => {
                 return {
                     id: doc.id,
                     ...data,
+
                     
                 };
             });
@@ -34,6 +35,7 @@ const Dashboard = () => {
         });
     }, [userEmail.email]);
 
+    console.log(order)
 
 
 
@@ -45,7 +47,6 @@ const Dashboard = () => {
                 return <>
                         <h1 className="brand">MyCommerce</h1>
                         <h3>Gracias por comprar en MyCommerce {order.buyer.nombre}</h3>
-                        
                            <h3>Aqui esta el id de su compra {order.id}</h3> 
                         </>
                     

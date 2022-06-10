@@ -35,8 +35,8 @@ const Cart = () => {
             });
         };
     
-     const finishOrder = (e) => {
-            e.preventDefault();
+     const finishOrder = () => {
+            
 
             setLoading(false);
             getUser(form)
