@@ -49,12 +49,12 @@ const Navbar = () => {
 
                 <CartWidget/>
             </nav>
-                <div>
+                <div className='mobile-container'>
                    {
                           open && <ul className="mobile">
                                 {
                                     categories.map(category => {
-                                        return <li key={category.id}><Link to={`/category/${category.id}`}>{category.description}</Link></li>
+                                        return <Link key={category.id} to={`/category/${category.id}`} className='link' >{category.description}</Link>
                                     })
                                 } 
                           </ul>

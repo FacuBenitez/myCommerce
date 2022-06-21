@@ -107,15 +107,17 @@ const Cart = () => {
                 <div className="order-container">
                  
 
-                    {cart.map(producto => {
-                                return <div className="product-container">
+                    {cart.map((producto,index) => {
+                                return <div className="product-container"
+                                key={index}
+                                >
                                             <div className="product">
                                             <span>Producto</span>
                                             <img src={producto.img} alt="" /> 
                                             </div>
                                             <div className="product"> 
                                                 <span>Descripción</span>
-                                                {producto.description} 
+                                                {producto.name} 
                                             </div>
                                         
                                             <div className="product">
@@ -126,10 +128,7 @@ const Cart = () => {
                                             <span>Cantidad</span>
                                             {producto.cantidad} 
                                             </div>
-                                            
                                         
-                            
-                                    
                                         <div> <Button onClick={()=>removeItem(producto.id)} color="error" variant="contained" size="small">Eliminar</Button></div>
                                     </div>
                                     
